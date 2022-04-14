@@ -1,0 +1,19 @@
+{
+  "restaurants": [
+    {
+      "name": "Blue Lagoon Munch Hut",
+      "orderTypes": ["A"],
+      "foodTypes": ["Salads"]
+    },
+    {
+      "name": "Fast Food On Time",
+      "orderTypes": ["A", "B"],
+      "foodTypes": ["Sandwiches"]
+    },
+    {
+      "name": "More Than Cow Yummy Chow",
+      "orderTypes": ["A", "B", "C"],
+      "foodTypes": ["Burgers"]
+    }
+  ]
+}

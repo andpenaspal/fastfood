@@ -21,7 +21,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/semi': ['error', 'always'],
     '@typescript-eslint/type-annotation-spacing': 'error',
-    "@typescript-eslint/naming-convention": ["error"],
+    "@typescript-eslint/naming-convention": ["error", { "selector": "enum", "format": ["UPPER_CASE"] }],
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {

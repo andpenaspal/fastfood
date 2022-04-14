@@ -1,0 +1,26 @@
+{
+  "Salads": {
+    "Avo": [10, 210],
+    "Lettuce": [12, 230],
+    "Olive": [10, 220],
+    "Gherkin": [8, 250],
+    "Onion": [14, 240],
+    "Cucumber": [9, 220]
+  },
+  "Burgers": {
+    "Onion": [22, 240],
+    "Cheese": [20, 230],
+    "Gherkin": [15, 220],
+    "Lettuce": [18, 240],
+    "Patty": [20, 210]
+  },
+  "Sandwiches": {
+    "Avo": [8, 240],
+    "Lettuce": [10, 230],
+    "Olive": [8, 240],
+    "Gherkin": [7, 250],
+    "Onion": [12, 230],
+    "Cucumber": [9, 210],
+    "Cheese": [16, 190]
+  }
+}
