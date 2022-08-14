@@ -1,0 +1,154 @@
+{
+  "Salads": {
+    "Salad 1": {
+      "Avo": 1,
+      "Lettuce": 2,
+      "Olive": 7,
+      "Gherkin": 1,
+      "Onion": 1,
+      "Cucumber": 1
+    },
+    "Salad 2": {
+      "Avo": 1,
+      "Lettuce": 2,
+      "Olive": 7,
+      "Gherkin": 2,
+      "Onion": 1,
+      "Cucumber": 1
+    },
+    "Salad 3": {
+      "Avo": 2,
+      "Lettuce": 2,
+      "Olive": 8,
+      "Gherkin": 2,
+      "Onion": 1,
+      "Cucumber": 1
+    },
+    "Salad 4": {
+      "Avo": 2,
+      "Lettuce": 3,
+      "Olive": 8,
+      "Gherkin": 3,
+      "Onion": 1,
+      "Cucumber": 2
+    },
+    "Salad 5": {
+      "Avo": 2,
+      "Lettuce": 3,
+      "Olive": 9,
+      "Gherkin": 3,
+      "Onion": 2,
+      "Cucumber": 2
+    },
+    "Salad 6": {
+      "Avo": 3,
+      "Lettuce": 3,
+      "Olive": 9,
+      "Gherkin": 4,
+      "Onion": 2,
+      "Cucumber": 2
+    }
+  },
+  "Burgers": {
+    "Burger 1": {
+      "Onion": 1,
+      "Cheese": 1,
+      "Gherkin": 1,
+      "Lettuce": 1,
+      "Patty": 1
+    },
+    "Burger 2": {
+      "Onion": 1,
+      "Cheese": 2,
+      "Gherkin": 2,
+      "Lettuce": 1,
+      "Patty": 1
+    },
+    "Burger 3": {
+      "Onion": 1,
+      "Cheese": 3,
+      "Gherkin": 3,
+      "Lettuce": 2,
+      "Patty": 1
+    },
+    "Burger 4": {
+      "Onion": 1,
+      "Cheese": 4,
+      "Gherkin": 4,
+      "Lettuce": 2,
+      "Patty": 2
+    },
+    "Burger 5": {
+      "Onion": 2,
+      "Cheese": 5,
+      "Gherkin": 5,
+      "Lettuce": 3,
+      "Patty": 2
+    }
+  },
+  "Sandwiches": {
+    "Sandwich 1": {
+      "Avo": 1,
+      "Lettuce": 1,
+      "Olive": 4,
+      "Gherkin": 1,
+      "Onion": 1,
+      "Cucumber": 1,
+      "Cheese": 1
+    },
+    "Sandwich 2": {
+      "Avo": 1,
+      "Lettuce": 1,
+      "Olive": 4,
+      "Gherkin": 1,
+      "Onion": 1,
+      "Cucumber": 1,
+      "Cheese": 1
+    },
+    "Sandwich 3": {
+      "Avo": 1,
+      "Lettuce": 1,
+      "Olive": 5,
+      "Gherkin": 1,
+      "Onion": 1,
+      "Cucumber": 1,
+      "Cheese": 1
+    },
+    "Sandwich 4": {
+      "Avo": 1,
+      "Lettuce": 1,
+      "Olive": 5,
+      "Gherkin": 1,
+      "Onion": 1,
+      "Cucumber": 2,
+      "Cheese": 2
+    },
+    "Sandwich 5": {
+      "Avo": 2,
+      "Lettuce": 2,
+      "Olive": 6,
+      "Gherkin": 2,
+      "Onion": 1,
+      "Cucumber": 2,
+      "Cheese": 2
+    },
+    "Sandwich 6": {
+      "Avo": 2,
+      "Lettuce": 2,
+      "Olive": 6,
+      "Gherkin": 2,
+      "Onion": 2,
+      "Cucumber": 2,
+      "Cheese": 3
+    },
+    "Sandwich 7": {
+      "Avo": 2,
+      "Lettuce": 2,
+      "Olive": 7,
+      "Gherkin": 2,
+      "Onion": 2,
+      "Cucumber": 2,
+      "Cheese": 4
+    }
+  }
+}
