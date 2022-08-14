@@ -1,13 +1,13 @@
-import { FOOD_TYPE, ORDER_TYPE, RESTAURANT } from './definitions/definitions';
-import foodTypes from './definitions/foodTypes.json';
-import menus from './definitions/menus.json';
-import restaurants from './definitions/restaurants.json';
-import InventoryItem from './fakeDB/inventoryItem';
-import FoodType from './foodType';
-import Ingredient from './ingredient';
-import OrderType from './orderType';
-import Recipe from './recipe';
-import Restaurant from './restaurant';
+import { FOOD_TYPE, ORDER_TYPE, RESTAURANT } from '../definitions/definitions';
+import foodTypes from '../definitions/foodTypes.json';
+import menus from '../definitions/menus.json';
+import restaurants from '../definitions/restaurants.json';
+import InventoryItem from '../fakeDB/inventoryItem';
+import FoodType from '../foodType';
+import Ingredient from '../ingredient';
+import OrderType from '../orderType';
+import Recipe from '../recipe';
+import Restaurant from '../restaurant';
 
 type RestaurantDefinition = { name: string; orderTypes: string[]; foodTypes: string[] };
 type IngredientStockDefinition = { [key: string]: number[] };
@@ -15,7 +15,7 @@ type IngredientDefinition = { [key: string]: { [key: string]: number } };
 
 type FoodTypeBuilt = [FoodType, InventoryItem[]];
 
-class dataBuilder {
+class DataBuilder {
   public static buildRestaurants(): Restaurant[] {
     const restaurantsDefinition = restaurants.restaurants as RestaurantDefinition[];
 
@@ -104,4 +104,4 @@ class dataBuilder {
   }
 }
 
-export default dataBuilder;
+export default DataBuilder;

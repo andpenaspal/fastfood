@@ -1,5 +1,8 @@
+import DataBuilder from '../utils/stockBuilder';
+
 describe('Basic test', () => {
   it('should pass', () => {
-    expect(true).toBeTruthy();
+    const check = DataBuilder.buildRestaurants();
+    console.dir(check, { depth: null });
   });
 });

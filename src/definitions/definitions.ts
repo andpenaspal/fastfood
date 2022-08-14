@@ -11,7 +11,7 @@ export enum ORDER_TYPE {
 }
 
 export enum FOOD_TYPE {
-  SALAD = 'Salads',
-  BURGER = 'Burgers',
-  SANDWICH = 'Sandwiches',
+  Salads = 'Salads',
+  Burgers = 'Burgers',
+  Sandwiches = 'Sandwiches',
 }
