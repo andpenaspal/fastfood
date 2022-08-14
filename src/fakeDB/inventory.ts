@@ -3,6 +3,12 @@ import MapTransformer from '../utils/transformToIdMap';
 
 import InventoryItem from './inventoryItem';
 
+interface IngredientResume {
+  itemName: string;
+  used: number;
+  refilled: number;
+}
+
 class Inventory {
   private items: Map<string, InventoryItem>;
 
@@ -24,8 +30,12 @@ class Inventory {
     ingredients.forEach((ingredient) => this.useIngredient(ingredient));
   }
 
-  public getQuantityRefilled(): Ingredient[] {
-    return [...this.items.values()].map((item) => new Ingredient(item.name, item.reFilledStock));
+  public getInventoryItemsResume(): IngredientResume[] {
+    return [...this.items.values()].map((item) => ({
+      itemName: item.name,
+      used: item.usedStock,
+      refilled: item.reFilledStock,
+    }));
   }
 }
 

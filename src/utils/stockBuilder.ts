@@ -5,6 +5,7 @@ import restaurants from '../definitions/restaurants.json';
 import InventoryItem from '../fakeDB/inventoryItem';
 import FoodType from '../foodType';
 import Ingredient from '../ingredient';
+import OrderManager, { OrderManagerComplex } from '../orderManager';
 import OrderType from '../orderType';
 import Recipe from '../recipe';
 import Restaurant from '../restaurant';
@@ -45,7 +46,12 @@ class DataBuilder {
 
       const [restaurantFoodTypeBuilt, restaurantIngredients] = this.foodTypeBuilder(restaurantFoodTypesMapped[0]);
 
-      return new Restaurant(restaurantName, orderTypesBuilt, restaurantFoodTypeBuilt, restaurantIngredients);
+      const orderManager =
+        restaurantName === RESTAURANT.FAST_FOOD_ON_TIME
+          ? new OrderManagerComplex(orderTypesBuilt)
+          : new OrderManager(orderTypesBuilt);
+
+      return new Restaurant(restaurantName, orderManager, restaurantFoodTypeBuilt, restaurantIngredients);
     });
   }
 

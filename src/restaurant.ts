@@ -2,8 +2,7 @@ import { ORDER_TYPE, RESTAURANT } from './definitions/definitions';
 import Inventory from './fakeDB/inventory';
 import InventoryItem from './fakeDB/inventoryItem';
 import FoodType from './foodType';
-import OrderManager from './orderManager';
-import OrderType from './orderType';
+import OrderManager, { OrderManagerComplex } from './orderManager';
 
 class Restaurant {
   private _name: RESTAURANT;
@@ -11,9 +10,14 @@ class Restaurant {
   private _foodType: FoodType;
   private _inventory: Inventory;
 
-  constructor(name: RESTAURANT, orderTypes: OrderType[], foodType: FoodType, inventoryItems: InventoryItem[]) {
+  constructor(
+    name: RESTAURANT,
+    orderManager: OrderManager | OrderManagerComplex,
+    foodType: FoodType,
+    inventoryItems: InventoryItem[],
+  ) {
     this._name = name;
-    this.orderManager = new OrderManager(orderTypes);
+    this.orderManager = orderManager;
     this._foodType = foodType;
     this._inventory = new Inventory(inventoryItems);
   }
@@ -23,7 +27,7 @@ class Restaurant {
   }
 
   get activeOrderTypes(): ORDER_TYPE[] {
-    return this.orderManager.activeOrderTypes;
+    return this.orderManager.orderTypesName;
   }
 
   public getMenu(): string[] {
@@ -38,6 +42,23 @@ class Restaurant {
     const menuItemIngredients = this._foodType.getRecipe(menuItem).ingredients;
 
     this._inventory.useMultipleIngredients(menuItemIngredients);
+  }
+
+  public getActiveOrderTypesSuccessfulCount() {
+    const orderTypes = this.orderManager.getOrderTypesResume();
+    const activeOrderTypes = orderTypes.filter((orderType) => !orderType.deactivated);
+    const successfulCount = activeOrderTypes.map((orderType) => ({
+      orderTypeName: orderType.orderType,
+      successfulOrders: orderType.successfulOrders,
+    }));
+
+    return successfulCount;
+  }
+
+  public getFinalResume() {
+    const orderResume = this.orderManager.getOrderTypesResume();
+    const inventoryResume = this._inventory.getInventoryItemsResume();
+    return { orderResume, inventoryResume };
   }
 
   private isSuccessfulOrder(orderType: ORDER_TYPE) {
